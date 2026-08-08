@@ -1,3 +1,13 @@
+.bg {
+    position: absolute;
+    z-index: -10;
+}
+
+.circle-base {
+    border-radius: 50%;
+    filter: blur(5px);
+}
+
 .little-sample-2 {
 	position: absolute;
 	left: 50%;
