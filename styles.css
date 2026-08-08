@@ -1,0 +1,105 @@
+.sample-1 {
+	position: relative;
+	width: 70%;
+	padding-top: 70%;
+	margin: 20px auto;
+	overflow: hidden;
+}
+.sample-1:after {
+	content: '';
+	display: block;
+	width: 85%;
+	padding-top: 85%;
+	border: solid 2px #000;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+}
+.rotate {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 2;
+}
+.rotate .rotate-ctn{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	animation: 100s linear big-circle infinite;	/* 大枠を回転させているアニメーション */
+}
+.rotate .box {
+	position: absolute;
+	width: 100px;
+	height: 50%;
+	transform-origin: 50% 100%;
+}
+/* 各コンテンツの文字を上向きにする */
+.rotate .box.box-1 { left: 50%; transform: translate(-50%, 0);}
+.rotate .box.box-2 { left: 50%; transform: translate(-50%, 0) rotate(45deg);}
+.rotate .box.box-3 { left: 50%; transform: translate(-50%, 0) rotate(90deg);}
+.rotate .box.box-4 { left: 50%; transform: translate(-50%, 0) rotate(135deg);}
+.rotate .box.box-5 { left: 50%; transform: translate(-50%, 0) rotate(180deg);}
+.rotate .box.box-6 { left: 50%; transform: translate(-50%, 0) rotate(225deg);}
+.rotate .box.box-7 { left: 50%; transform: translate(-50%, 0) rotate(270deg);}
+.rotate .box.box-8 { left: 50%; transform: translate(-50%, 0) rotate(315deg);}
+.rotate .box .parts {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px 0;
+	background: #eee;
+	text-align: center;
+}
+/* 各コンテンツを回転させるアニメーション */
+.rotate .box.box-1 .parts { animation: 100.0s linear circle1 infinite;}
+.rotate .box.box-2 .parts { animation: 100.0s linear circle2 infinite;}
+.rotate .box.box-3 .parts { animation: 100.0s linear circle3 infinite;}
+.rotate .box.box-4 .parts { animation: 100.0s linear circle4 infinite;}
+.rotate .box.box-5 .parts { animation: 100.0s linear circle5 infinite;}
+.rotate .box.box-6 .parts { animation: 100.0s linear circle6 infinite;}
+.rotate .box.box-7 .parts { animation: 100.0s linear circle7 infinite;}
+.rotate .box.box-8 .parts { animation: 100.0s linear circle8 infinite;}
+
+/* keyframesは下に記述 */
+@keyframes big-circle {
+ 0% { transform: rotate(0deg);}
+ 100% { transform:rotate(360deg);}
+}
+@keyframes circle1 {
+ 0% { transform: rotate(0deg);}
+ 100% { transform: rotate(-360deg);}
+}
+@keyframes circle2 {
+ 0% { transform: rotate(315deg);}
+ 100% { transform: rotate(-45deg);}
+}
+@keyframes circle3 {
+ 0% { transform: rotate(270deg);}
+ 100% { transform: rotate(-90deg);}
+}
+@keyframes circle4 {
+ 0% { transform: rotate(225deg);}
+ 100% { transform: rotate(-135deg);}
+}
+@keyframes circle5 {
+ 0% { transform: rotate(180deg);}
+ 100% { transform: rotate(-180deg);}
+}
+@keyframes circle6 {
+ 0% { transform: rotate(135deg);}
+ 100% { transform: rotate(-225deg);}
+}
+@keyframes circle7 {
+ 0% { transform: rotate(90deg);}
+ 100% { transform: rotate(-270deg);}
+}
+@keyframes circle8 {
+ 0% { transform: rotate(45deg);}
+ 100% { transform: rotate(-315deg);}
+}
