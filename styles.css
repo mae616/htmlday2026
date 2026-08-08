@@ -1,3 +1,28 @@
+.little-sample-1 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 50%;
+	padding-top: 50%;
+	margin: 100px auto;
+	overflow: hidden;
+	z-index: 10;
+}
+.little-sample-1:after {
+	content: '';
+	display: block;
+	width: 85%;
+	padding-top: 85%;
+	border: solid 2px #000;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+}
+
 .sample-1 {
 	position: relative;
 	width: 70%;
